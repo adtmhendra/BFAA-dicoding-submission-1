@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F5F5"
+    android:fillViewport="true"
+    tools:ignore="Overdraw">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="24dp"
+        tools:context=".DetailActivity">
+
+        <ImageView
+            android:id="@+id/imgBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription,MissingConstraints"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="24dp"
+            android:src="@color/darker_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/imgBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgBackground"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btnFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_button"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="35dp"
+            android:paddingTop="8dp"
+            android:paddingRight="35dp"
+            android:paddingBottom="8dp"
+            android:text="@string/follow"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="@+id/imgRepo"
+            app:layout_constraintTop_toBottomOf="@+id/imgBackground" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/bill_gates"
+            android:textColor="#5A5555"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgAvatar" />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="94dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/billgates"
+            android:textColor="#787676"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto"
+            android:maxLines="1"
+            android:singleLine="false"
+            android:text="@string/jakarta_indonesia"
+            android:textColor="#787676"
+            android:textSize="12sp"
+            app:layout_constrainedWidth="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUsername"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/tvCompany"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto"
+            android:maxLines="1"
+            android:singleLine="false"
+            android:text="@string/dicoding_indonesia"
+            android:textColor="#787676"
+            android:textSize="12sp"
+            app:layout_constrainedWidth="false"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLocation"
+            app:layout_constraintStart_toEndOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/tvLocation"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/_5_following"
+            android:textColor="#6E6C6C"
+            android:textSize="15sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+            app:layout_constraintStart_toEndOf="@+id/tvFolowing" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/_10_followers"
+            android:textColor="#6E6C6C"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/tvFollowers"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
+
+        <TextView
+            android:id="@+id/tvFolowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/_8"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+            app:layout_constraintStart_toEndOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/tvRepository"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/_20"
+            android:textColor="#020202"
+            android:textColorHint="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+            app:layout_constraintStart_toEndOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/_30_repository"
+            android:textColor="#6E6C6C"
+            android:textSize="15sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+            app:layout_constraintStart_toEndOf="@+id/tvRepository" />
+
+        <TextView
+            android:id="@+id/tvFollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/_10"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView9"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/new_repository"
+            android:textColor="#5A5555"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <ImageView
+            android:id="@+id/imgRepo"
+            android:layout_width="349dp"
+            android:layout_height="231dp"
+            android:layout_marginTop="3dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:srcCompat="@drawable/repository"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/imgButtonEmail"
+            android:layout_width="44dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="#003F51B5"
+            android:backgroundTint="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/btnFollow"
+            app:layout_constraintTop_toBottomOf="@+id/imgBackground"
+            app:srcCompat="@android:drawable/ic_dialog_email"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/imgButtonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintStart_toStartOf="@+id/imgBackground"
+            app:layout_constraintTop_toTopOf="@+id/imgBackground"
+            app:srcCompat="@drawable/abc_vector_test"
+            tools:ignore="ContentDescription,PrivateResource" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/circle_view"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLocation"
+            app:layout_constraintStart_toEndOf="@+id/tvLocation"
+            app:layout_constraintTop_toTopOf="@+id/tvLocation"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
