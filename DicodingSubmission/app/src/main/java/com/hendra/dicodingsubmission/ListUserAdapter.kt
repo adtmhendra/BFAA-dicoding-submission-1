@@ -29,12 +29,12 @@ class ListUserAdapter(private val list: ArrayList<User>) : RecyclerView.Adapter<
         }
     }
 
-    inner class ListViewHolder (private val view: View) : RecyclerView.ViewHolder(view) {
+    inner class ListViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindItem(user: User) {
-            with(view) {
+            with(itemView) {
                 tvName.text    = user.name
                 tvCompany.text = user.company
-                Glide.with(view).load(user.avatar).into(imgAvatar)
+                Glide.with(itemView).load(user.avatar).into(imgAvatar)
             }
         }
     }
